@@ -27,6 +27,7 @@ for file_name in file:
             print('Video has ended or failed, try a different video format!')
             break
         if frame_num % 90 == 0:
+            cv2.imshow("frame",frame)
             cv2.imwrite(save_folder_path + root + "_" + str(i) + ".jpg",frame)
             i+=1
         frame_num += 1
